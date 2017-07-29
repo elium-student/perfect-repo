@@ -1,15 +1,27 @@
-// game 1 will
-// 	alternately write x's and o's
-// 	it will over write old x's and o's
-// 	state is stored directly in the board
+// game 2 will
+// 	store game state in a variable.  array
+// 	not allow players to play the same square twice
+// 	x and o should alternate
+// 	console log the board
 
 var nextPlayer = true;
 
+var boardState = [
+	null, null, null,
+	null, null, null,
+	null, null, null
+	];
+
 function play(box) {
-	if(nextPlayer) {
-		box.innerHTML = 'x';
+	if(boardState[box.id] == null) {	
+		if(nextPlayer) {
+			boardState[box.id] = 'x';
+		} else {
+			boardState[box.id] = 'o';
+		}
+		nextPlayer = !nextPlayer;
 	} else {
-		box.innerHTML = 'o';
-	}
-	nextPlayer = !nextPlayer;
-}
+		alert('grow up. you can\'t do that')
+	};
+	console.log(boardState);
+};

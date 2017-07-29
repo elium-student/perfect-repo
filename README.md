@@ -1,4 +1,5 @@
-version 2:  	
-  * alternately write x's and o's
-  * it will over write old x's and o's
-  * state is stored directly in the board
+version 3:  	
+  * store game state in an array
+  * not allow players to play the same square twice
+  * x and o alternate
+  * console log the board
