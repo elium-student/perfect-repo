@@ -1,0 +1,34 @@
+"nextPlayer": Boolean  
+	initialized: true
+	purpose: know whether to draw 'x' or 'o'
+
+"boardState": array of arrays
+	initialized: 3x3 filled with null's
+	purpose: to store the current state of the game 
+
+"play": function
+	args: 1
+		"box": a board square DOM element
+			purpose: so the function can write to the right square on screen
+	return: undefined
+	behavior: updates the boardState with the most recent play.  then calls populateBoard.
+	purpose: this function is what describes what determines what happens when a user clicks a square  
+
+"populateBoard": function
+	args: 0
+	return: undefined
+	behavior: draws boardState into the DOM's board.
+	purpose: so users can see what moves have been made
+
+"buildBoard": function
+	args: 0
+	return: undefined
+	behavior: builds a tictactoe board into the empty 'ticTacBoard' element
+	purpose:  makes the board a user will interact with
+
+"DOMContentLoaded": event listener
+	callback: function
+		args: 0
+		return: undefined
+		behavior: calls buildBoard
+		purpose: to make sure the board is drawn when the browser is ready
