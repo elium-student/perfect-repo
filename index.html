@@ -1,25 +1,8 @@
-<!-- game 1 will
-  alternately write x's and o's
-  it will over write old x's and o's
-  state is stored directly in the board -->
+<!-- game 6 will
+  start with an empty board in the html and generate the board dynamically
+  have an on load listener to generate the first board -->
 
-<table>
-  <tr>
-    <td id="0" onclick='play(this)'></td>
-    <td id="1" onclick='play(this)'></td>
-    <td id="2" onclick='play(this)'></td>
-  </tr>
-  <tr>
-    <td id="3" onclick='play(this)'></td>
-    <td id="4" onclick='play(this)'></td>
-    <td id="5" onclick='play(this)'></td>
-  </tr>
-  <tr>
-    <td id="6" onclick='play(this)'></td>
-    <td id="7" onclick='play(this)'></td>
-    <td id="8" onclick='play(this)'></td>
-  </tr>
-</table>
-  
+<table id='ticTacBoard'></table>
+
 <script src="tictactoe.js"></script>
 <link rel="stylesheet" type="text/css" href="./tictactoe.css">
