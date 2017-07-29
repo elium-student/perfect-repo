@@ -1,7 +1,9 @@
+This is a tictactoe board.  It doesn't know who won
+
+[click here for a live demo](https://colevanderswands.github.io/perfect-repo/)  
+
 version 7:  	
   * dynamically draw board when page is loaded
-  
-[click here for a live demo](https://colevanderswands.github.io/perfect-repo/)
 
 ----------------------
 
@@ -16,4 +18,5 @@ A coherent repo will have:
   * a gh-pages demo of the final step
   * specs for the final step
   * a few tests to show you tried
+  * a todo list: no project is every truely finished
   
