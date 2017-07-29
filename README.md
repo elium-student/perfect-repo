@@ -1,2 +1,2 @@
-version 6:  	
-  * like v.5 but with 'row' attribute on 'tr' tag
+version 7:  	
+  * dynamically draw board when page is loaded
