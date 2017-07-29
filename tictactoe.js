@@ -1,8 +1,5 @@
-// game 2 will
-// 	store game state in a variable.  array
-// 	not allow players to play the same square twice
-// 	x and o should alternate
-// 	console log the board
+// game 3 will 
+// 	have populateBoard from 1d array
 
 var nextPlayer = true;
 
@@ -20,8 +17,17 @@ function play(box) {
 			boardState[box.id] = 'o';
 		}
 		nextPlayer = !nextPlayer;
+		// redraw board only if it was changed?
+		populateBoard();
 	} else {
 		alert('grow up. you can\'t do that')
 	};
-	console.log(boardState);
+	// redraw board even if it wasn't changed?
+	// populateBoard();
+};
+
+function populateBoard() {
+	for(var i = 0; i < 9; i++) {
+		document.getElementById(i).innerHTML = boardState[i];
+	};
 };
