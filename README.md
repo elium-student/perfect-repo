@@ -1,2 +1,4 @@
-the first step of tic-tac-toes:  
-when you click a box, it's index number happens
+version 2:  	
+  * alternately write x's and o's
+  * it will over write old x's and o's
+  * state is stored directly in the board
