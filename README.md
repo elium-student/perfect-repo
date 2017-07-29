@@ -1,5 +1,2 @@
-version 5:  	
-  * store state in nested arrays  
-  * use elem.getAttribute() to populate dom  
-  * a populateBoard function that writes the boardState into the html
-  * each td will have a 'row' and a 'column' attribute
+version 6:  	
+  * like v.5 but with 'row' attribute on 'tr' tag

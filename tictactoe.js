@@ -1,8 +1,5 @@
-// game 4 will
-// 	have nested arrays -> use elem.getAttribute()
-// 	a populateBoard function that writes the boardState into the html
-// 	each td will have a 'row' and a 'column' attribute
-
+// game 5 will
+// 	like 4 but with 'row' on the 'tr'
 
 var nextPlayer = true;
 
@@ -13,7 +10,7 @@ var boardState = [
 	];
 
 function play(box) {
-	var row = box.getAttribute('row');
+	var row = box.parentElement.getAttribute('row');
 	var column = box.getAttribute('column');
 	if(boardState[row][column] == null) {	
 		if(nextPlayer) {
@@ -22,21 +19,25 @@ function play(box) {
 			boardState[row][column] = 'o';
 		}
 		nextPlayer = !nextPlayer;
-		// redraw board only if it was changed?
+		// did someone win? 
+		// if they did, change the state and redraw
 		populateBoard();
 	} else {
 		alert('grow up. you can\'t do that')
 	};
-	// redraw board even if it wasn't changed?
-	// populateBoard();
 };
 
+
 function populateBoard() {
-	var elementID = 0;
+	var board = document.getElementById('ticTacBoard').children[0].children;
+	var row;
+	var column;
 	for(var i = 0; i < 3; i++) {
+		row = board[i].children;
 		for(var j = 0; j < 3; j++) {
-			document.getElementById(elementID).innerHTML = boardState[i][j];
-			elementID++;
+			column = row[j];
+			column.innerHTML = boardState[i][j];
 		};
 	};
 };
+
